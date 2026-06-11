@@ -1,0 +1,24 @@
+{
+    "name": "systemcode/customer-address-autocomplete-brazil",
+    "description": "Brazilian postcode mask and address autocomplete for Magento customer address forms.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0"
+    ],
+    "require": {
+        "systemcode/base": "^2.0",
+        "systemcode/customer": "^1.0",
+        "magento/module-customer": "*",
+        "magento/module-checkout": "*",
+        "magento/module-directory": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "SystemCode\\CustomerAddressAutocompleteBrazil\\": ""
+        }
+    }
+}

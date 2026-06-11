@@ -1,0 +1,19 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \SystemCode\CustomerAddressAutocompleteBrazil\ViewModel\FormConfig $viewModel */
+
+$viewModel = $block->getData('view_model');
+?>
+<script>
+    window.customerAddressAutocompleteBrazil = <?= /* @noEscape */ $viewModel->getJsonConfig() ?>;
+</script>
+<script type="text/x-magento-init">
+    {
+        "#form-validate #zip, .form-address-edit #zip": {
+            "SystemCode_CustomerAddressAutocompleteBrazil/js/widget/postcode-mask": {}
+        },
+        "#form-validate, .form-address-edit": {
+            "SystemCode_CustomerAddressAutocompleteBrazil/js/form/address-autocomplete": {}
+        }
+    }
+</script>

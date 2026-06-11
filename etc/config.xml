@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customeraddressautocompletebrazil>
+            <general>
+                <enabled>0</enabled>
+                <accept_general_zipcode>1</accept_general_zipcode>
+                <postcode_before_address>1</postcode_before_address>
+                <lock_fields_until_lookup>1</lock_fields_until_lookup>
+                <lock_found_fields>1</lock_found_fields>
+            </general>
+            <street_mapping>
+                <line_1>street</line_1>
+                <line_2>none</line_2>
+                <line_3>neighborhood</line_3>
+                <line_4>additional_info</line_4>
+            </street_mapping>
+        </customeraddressautocompletebrazil>
+    </default>
+</config>

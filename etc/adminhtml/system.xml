@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="customeraddressautocompletebrazil" translate="label" sortOrder="35"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Address Autocomplete (Brazil)</label>
+            <tab>systemcode</tab>
+            <resource>SystemCode_CustomerAddressAutocompleteBrazil::config</resource>
+            <group id="general" translate="label comment" sortOrder="10"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Apply Brazilian postcode mask and address autocomplete on checkout
+and customer address forms.</comment>
+                </field>
+                <field id="accept_general_zipcode" translate="label comment" type="select" sortOrder="20"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Accept General Zip Code</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>When enabled, zip codes without a street name are still considered valid.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="postcode_before_address" translate="label comment" type="select" sortOrder="30"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Move Postcode Before Address</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Moves the postcode field before the street address fields.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="lock_fields_until_lookup" translate="label comment" type="select" sortOrder="40"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lock Fields Until Lookup</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Disable address fields until the zip code lookup completes.
+If the API returns an error, the fields are enabled for manual entry.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="lock_found_fields" translate="label comment" type="select" sortOrder="50"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lock Autofilled Fields</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Prevent editing of address fields filled by the zip code lookup.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="street_mapping" translate="label comment" sortOrder="20"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Street Line Mapping</label>
+                <comment><![CDATA[Define which zip code lookup value fills each street address line.
+Use this when custom street line labels change the expected field order.]]></comment>
+                <depends>
+                    <field id="general/enabled">1</field>
+                </depends>
+                <field id="line_1" translate="label" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Line 1</label>
+                    <source_model>SystemCode\CustomerAddressAutocompleteBrazil\Model\Config\Source\StreetLineField</source_model>
+                </field>
+                <field id="line_2" translate="label" type="select" sortOrder="20"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Line 2</label>
+                    <source_model>SystemCode\CustomerAddressAutocompleteBrazil\Model\Config\Source\StreetLineField</source_model>
+                </field>
+                <field id="line_3" translate="label" type="select" sortOrder="30"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Line 3</label>
+                    <source_model>SystemCode\CustomerAddressAutocompleteBrazil\Model\Config\Source\StreetLineField</source_model>
+                </field>
+                <field id="line_4" translate="label" type="select" sortOrder="40"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Line 4</label>
+                    <source_model>SystemCode\CustomerAddressAutocompleteBrazil\Model\Config\Source\StreetLineField</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

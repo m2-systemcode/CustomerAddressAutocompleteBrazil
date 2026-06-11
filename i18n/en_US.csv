@@ -1,0 +1,28 @@
+"Address Autocomplete (Brazil)","Address Autocomplete (Brazil)"
+"Enable","Enable"
+"Apply Brazilian postcode mask and address autocomplete on checkout
+and customer address forms.","Apply Brazilian postcode mask and address autocomplete on checkout
+and customer address forms."
+"Accept General Zip Code","Accept General Zip Code"
+"When enabled, zip codes without a street name are still considered valid.","When enabled, zip codes without a street name are still considered valid."
+"Move Postcode Before Address","Move Postcode Before Address"
+"Moves the postcode field before the street address fields.","Moves the postcode field before the street address fields."
+"Lock Fields Until Lookup","Lock Fields Until Lookup"
+"Disable address fields until the zip code lookup completes.
+If the API returns an error, the fields are enabled for manual entry.","Disable address fields until the zip code lookup completes.
+If the API returns an error, the fields are enabled for manual entry."
+"Lock Autofilled Fields","Lock Autofilled Fields"
+"Prevent editing of address fields filled by the zip code lookup.","Prevent editing of address fields filled by the zip code lookup."
+"General","General"
+"Street Line Mapping","Street Line Mapping"
+"Define which zip code lookup value fills each street address line.
+Use this when custom street line labels change the expected field order.","Define which zip code lookup value fills each street address line.
+Use this when custom street line labels change the expected field order."
+"Line 1","Line 1"
+"Line 2","Line 2"
+"Line 3","Line 3"
+"Line 4","Line 4"
+"None","None"
+"Street","Street"
+"Neighborhood","Neighborhood"
+"Additional Info","Additional Info"
